@@ -1,0 +1,146 @@
+﻿Initializing a player
+Create a player object called player
+        Set a class attribute called TOTAL to keep track of the total good and bad points
+        Create a constructor to define variables, the constructor takes name, good points, bad points
+                Assign the player name
+                Set the player good points to 0
+                Set the player bad points to 0
+        Create a string function
+                Print the player name
+                Print the player good points
+                Print the player bad points
+        Define a function that will add good points to the player’s total good point score
+                Reassign the player good points with the additional good points (let’s say +5 points)
+                Return the player good points
+        Define a function that will add bad points to the player’s total bad point score
+                Reassign the player bad points with the additional bad points (let’s say +5 points)
+Return the player bad points
+
+
+        Define a function that will add together the good and bad points
+                This function will take the good points, and the bad points
+                Add the good point AND bad points to the class attribute TOTAL
+                Return the attribute TOTAL
+Inside of our main function, instantiate a new player with the variable “Player”
+
+
+Title Screen
+Print out the game title
+Print out the menu
+While the user does not choose to quit, print the menu
+        Quit = 0
+        Start = 1
+        Ask the user for their choice
+        Convert the user choice into a string
+        If the user chose start (1) then run the game
+        If the user chose quit (0) then quit the game with sys.exit
+        Otherwise if the user did not choose 0 or 1, but chose something else, display the menu and request for user input
+
+
+Name Input
+After the player chooses to start the game, ask them for a name and save it into a variable
+Convert that variable into a string
+When we create a new instance of the player object, simply use the variable above when we want to use their name.
+
+
+
+
+
+
+
+
+Obstacles
+Create a class called obstacles
+        Create a constructor to define variables (title, story, good or bad stat, points)
+        Assign the obstacle  title
+        Assign the obstacle story
+        Assign whether the obstacle is good or bad
+        Assign how many points the obstacle will add
+        Create a string function
+        Print out the obstacle title
+        Print out the obstacle story
+        Print out how many points were added to which stat (good or bad)
+        Create a function to add good points 
+        This function will take the stat (good) and the amount of points to add
+        Run the player object’s function to add good points (with the parameters passed down)
+        Create a function to add bad points
+        This function will take the stat (bad) and the amount of points to add
+        Run the player object’s function to add bad points (with the parameters passed down)
+
+
+* Before we create the map, we can create the obstacles by instantiating them. If we add these instantiations to a list, we can pick randomly through the list as we loop through the map creation.
+
+
+Map Creation
+Create an empty list to hold slots on our map
+Instantiate obstacles (create individual good and bad obstacles) and save them to variables
+Create an empty list to hold the obstacles
+Add those variables to the obstacle list
+Create a symbol for the blank slots (like a space) and save to a variable
+Add the obstacle list and the symbols to the slot list
+Create a player location variable that starts the player at [0][0]
+
+
+Create a function that takes a height, width
+        Create a list called the_map that is empty
+        Create a list called current_row that is also empty
+        Loop through the range of 0 to width
+                With each iteration, add the random slot to the current_row list
+        Loop through the range of 0 to height
+                With each iteration, add the current_row to the the_map list
+        Return the_map for future use
+Create a function that prints the map, which takes, the map, a top border, and a side border
+        Create and set a variable named border to an empty space
+        Create a loop that starts at 0 and goes until the end of the width ***
+                Take the border and add the top border to it
+        Take the border and add another space
+        Print the border
+        Create a loop that will go iterate through every row in the map
+        Print the side border, and get rid of the end line character
+        Create another loop that iterates through the characters in each row
+                Print each character and get rid of the end line character
+        Print the side border and get rid of the end line character
+        Print an empty line
+Print the border
+######
+Create a list of commands and save it to a variable
+Print the command list every time after the map is printed
+
+
+Inside of the main function, call our create map function, and use our print map function
+
+
+Map Movement
+Define a function that moves the player up
+        Get the player location
+        Re assign the player location to the player location with 1 subtracted from the row
+        Return the player location
+Define a function that moves the player down
+        Get the player location
+        Re assign the player location to the player location with 1 added to the row
+Return the player location
+Define a function that moves the player left
+        Get the player location
+        Re assign the player location to the player location with 1 subtracted from the column
+        Return the player location
+Define a function that moves the player right
+        Get the player location
+        Re assign the player location to the player location with 1 added to the column
+        Return the player location
+Create a loop that continues constantly
+        Assign a variable, key, that gets the player’s key inputs
+        If the variable key is equal to the “w” key code
+                Use the move_up function
+                Reprint the map with the new player location
+        If the key is equal to the “a” key code
+                Use the move_left function
+Reprint the map with the new player location
+        If the key is equal to the “s” key code
+                Use the move_down function
+                Reprint the map with the new player location
+        If the key is equal to the “d” key code
+                Use the move_right function
+                Reprint the map with the new player location
+        Otherwise if the key does not equal any of the above
+                Do nothing
+                Reprint the map
