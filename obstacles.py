@@ -1,9 +1,10 @@
 import player
 # Obstacle Intialization
 class Obstacle(object):
-    def __init__(self, name, story):
+    def __init__(self, name, story, symbol):
         self.name = name
         self.story = story
+        self.symbol = symbol
 
         # use the text files when making an Obstacle
         # name = "Larry The Snake"
@@ -26,9 +27,7 @@ class Obstacle(object):
 # testing the obstacle creation
 # Get text from a file and save them variables
 # Then use the variables when creating an instance
-new_obstacle = Obstacle("Larry The Snake", "He bit you! Run away!")
-new_obstacle1 = Obstacle("Lemon The Cat", "Lemon purrs...")
-new_obstacle2 = Obstacle("SnakeMan the Hippo", "Fuck u say to me??")
+#new_obstacle = Obstacle("Larry The Snake", "He bit you! Run away!")
 
 # When we run into an obstacle, just run the appropriate function to deduct
 # points from the player stat
