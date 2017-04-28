@@ -16,21 +16,30 @@ obstacle_list.extend(new_obstacle2.symbol)
 obstacle_list.extend(new_obstacle3.symbol)
 obstacle_list.extend(new_obstacle4.symbol)
 
-flooring = "__"
+flooring = "_"
 
 map_slots.extend(obstacle_list)
 map_slots.extend(flooring)
 map_slots.extend(flooring)
 map_slots.extend(flooring)
+map_slots.extend(flooring)
+map_slots.extend(flooring)
+map_slots.extend(flooring)
 
-def map_creation(height, width):
+def map_creation():
     the_map = []
     the_current_row = []
-    for x in range(0, width):
-        # the_current_row.append("$")
-        the_current_row.append(random.choice(map_slots))
-    for i in range(0, height):
+    for x in range(60):
+        random_num = random.randrange(0, 10)
+        if random_num % 20 == 0:
+            the_current_row.append("#")
+        else:
+            the_current_row.append("_")
+             # the_current_row.append(random.choice(map_slots))
+        random_num = random.randrange(0, 10)
+    for i in range(15):
         the_map.append(the_current_row)
+
     return the_map
 
 def print_the_map(map, top_border, side_border):
@@ -47,5 +56,5 @@ def print_the_map(map, top_border, side_border):
         print()
     print(border)
 
-game_map = map_creation(20, 50)
+game_map = map_creation()
 print_the_map(game_map, "-", "|")
