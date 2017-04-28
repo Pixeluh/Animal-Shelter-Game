@@ -24,9 +24,9 @@ def print_the_map(the_map):
         for each_character in each_row:
             print(each_character, end="")
 
-#the_map[0][0] = "_X_"
 row = 0
 character = 0
+the_map[row][character] = "_X_"
 
 print_the_map(the_map)
 
@@ -36,45 +36,55 @@ def move_up():
     """ HIHIII """
     player_location = the_map[row-1][character]
     print("\n", "Spot: \t", player_location, "\n")
-    the_map[row][character] = "___"
     the_map[row-1][character] = "_X_"
+    the_map[0][0] = "___"
     print_the_map(the_map)
 def move_down():
     player_location = the_map[row+1][character]
     print("\n", "Spot: \t", player_location, "\n")
-    the_map[row][character] = "___"
     the_map[row+1][character] = "_X_"
+    the_map[0][0] = "___"
     print_the_map(the_map)
+    return previous_char
 def move_left():
     """ HIHIII """
     player_location = the_map[row][character-1]
     print("\n", "Spot: \t", player_location, "\n")
-    the_map[row][character] = "___"
     the_map[row][character-1] = "_X_"
+    the_map[0][0] = "___"
     print_the_map(the_map)
+    return previous_char
 def move_right():
     """ HIHIII """
-    player_location = the_map[row][character-1]
+    player_location = the_map[row][character+1]
     print("\n", "Spot: \t", player_location, "\n")
-    the_map[row][character] = "___"
     the_map[row][character+1] = "_X_"
+    the_map[0][0] = "___"
     print_the_map(the_map)
+    return previous_char
 
 while(True):
     key = ord(getch())
     if key == 119:
+        previous_char = the_map[row-1][character]
         move_up()
         row -= 1
+        the_map[row][character] = str(previous_char)
     elif key == 97:
+        previous_char = the_map[row][character-1]
         move_left()
         character -= 1
+        the_map[row][character] = str(previous_char)
     elif key == 115:
+        previous_char = the_map[row+1][character]
         move_down()
         row += 1
+        the_map[row][character] = str(previous_char)
     elif key == 100:
+        previous_char = the_map[row][character+1]
         move_right()
         character += 1
-
+        the_map[row][character] = str(previous_char)
 # TO DO:
 # Replace the characters as we move
 # Set up limitations for movement. (If we move out of the boundry the game crashes)
