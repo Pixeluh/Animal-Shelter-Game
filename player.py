@@ -1,7 +1,7 @@
 # Player Intialization
 
 class Player(object):
-    TOTAL = 0
+    # TOTAL = 0
     def __init__(self, name):
         self.name = name
         self.good_points = 0
@@ -23,11 +23,11 @@ class Player(object):
         self.bad_points += 5
         return self.bad_points
 
-    def add_the_points(self):
-        Player.TOTAL += self.good_points
-        Player.TOTAL += self.bad_points
+    # def add_the_points(self):
+        # Player.TOTAL += self.good_points
+        # Player.TOTAL += self.bad_points
         # Returns the TOTAL amount of points to trigger the story line
-        return player.TOTAL
+        # return Player.TOTAL
 
 
 # The code below will be moved into our main file when we are ready
