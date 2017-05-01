@@ -1,10 +1,10 @@
 import player
 # Obstacle Intialization
 class Obstacle(object):
-    def __init__(self, name, story, symbol):
+    def __init__(self, name, story, stat):
         self.name = name
         self.story = story
-        self.symbol = symbol
+        self.stat = stat
 
         # use the text files when making an Obstacle
         # name = "Larry The Snake"
@@ -13,7 +13,7 @@ class Obstacle(object):
 
     def __str__(self):
         output = ""
-        output += "Name: \t" + self.name + "\n"
+        output += "**--**--** \t" + self.name + "\t**--**--**\n"
         output += "Story: \t" + self.story + "\n"
         return output
 
