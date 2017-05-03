@@ -88,6 +88,22 @@ def run_the_map():
             else:
                 obstacle_to_use.obstacle_add_bad_points()
 
+        elif player_location > the_map[11][character]:
+            print_border_msg()
+
+        elif player_location == the_map[0][character]:
+            print_border_msg()
+
+        elif player_location > the_map[row][17]:
+            print_border_msg()
+
+        elif player_location == the_map[row][0]:
+            print_border_msg()
+
+    def print_border_msg():
+        print("HALT. DO NOT GO BEYOND THIS POINT.")
+        print("EXECUTION IS LIKELY.")
+
     def move_up():
 
         player_location = the_map[row-1][character]
