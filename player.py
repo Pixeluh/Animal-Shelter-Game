@@ -1,6 +1,8 @@
 import title_screen
 import map_v2
+
 class Player(object):
+
     def __init__(self, name):
 
         self.name = name

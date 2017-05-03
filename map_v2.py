@@ -1,4 +1,5 @@
 def run_the_map():
+
     from msvcrt import getch
     from os import system
     import os
@@ -26,6 +27,7 @@ def run_the_map():
                ["---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---", "---"]]
 
     def print_the_map(the_map):
+
         for each_row in the_map:
             print()
             for each_character in each_row:
