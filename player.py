@@ -1,5 +1,5 @@
 import title_screen
-import map_v2
+import map_v3
 
 class Player(object):
 

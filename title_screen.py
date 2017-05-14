@@ -15,7 +15,7 @@ def start_title_sequence():
     **
       **
      *   * *   *
-        dem cages
+          animals
     *    ** *    **
      **    ** **    **
        * *

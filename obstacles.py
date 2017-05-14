@@ -1,5 +1,5 @@
 import player
-import map_v2
+import map_v3
 
 class Obstacle(object):
 
